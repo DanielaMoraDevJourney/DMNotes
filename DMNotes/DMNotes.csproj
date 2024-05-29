@@ -71,12 +71,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AboutPage.xaml">
+	  <MauiXaml Update="DMViews\DMAboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="NotePage.xaml">
+	  <MauiXaml Update="DMViews\DMNotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="DMModels\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="DMViews\DMAboutPage.xaml.cs">
+	    <DependentUpon>DMAboutPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="DMViews\DMNotePage.xaml.cs">
+	    <DependentUpon>DMNotePage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>
